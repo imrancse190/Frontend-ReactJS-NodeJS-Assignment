@@ -94,44 +94,44 @@ const AugustCalendarData = [
 export const TravelCheckInDateContainer = () => {
   return (
     <div>
-      <section class="availability-calendar">
+      <section className="availability-calendar">
         <h2>Select check-in date</h2>
-        <p class="availability-calendar-hint">
+        <p className="availability-calendar-hint">
           Add your travel dates for exact pricing
         </p>
-        <div class="calendar">
-          <div class="custom-calendar">
-            <div class="calendar-header">
-              <button class="prev-month-btn">&lt;</button>
+        <div className="calendar">
+          <div className="custom-calendar">
+            <div className="calendar-header">
+              <button className="prev-month-btn">&lt;</button>
               <h2>July 2024</h2>
-              <button class="next-month-btn">
+              <button className="next-month-btn">
                 &gt;
-                <img src="./assets/icon/right_arrow_icon_home.png" />
+                <img alt="" src="./assets/icon/right_arrow_icon_home.png" />
               </button>
             </div>
-            <div class="calendar-grid">
+            <div className="calendar-grid">
               {JulyCalendarData.map((item, index) => {
                 return <div className={item.class}>{item.value}</div>;
               })}
             </div>
           </div>
           {/* <!-- Checkout date --> */}
-          <div class="custom-calendar calendar-august">
-            <div class="calendar-header">
-              <button class="prev-month-btn">&lt;</button>
+          <div className="custom-calendar calendar-august">
+            <div className="calendar-header">
+              <button className="prev-month-btn">&lt;</button>
               <h2>August 2024</h2>
-              <button class="next-month-btn">&gt;</button>
+              <button className="next-month-btn">&gt;</button>
             </div>
-            <div class="calendar-grid">
+            <div className="calendar-grid">
               {AugustCalendarData.map((item, index) => {
                 return <div className={item.class}>{item.value}</div>;
               })}
             </div>
           </div>
         </div>
-        <div class="select-keyboard-and-clear-date">
-          <img src="./assets/icon/keyboard_icon_home.png" />
-          <button class="clear-dates">Clear dates</button>
+        <div className="select-keyboard-and-clear-date">
+          <img alt="" src="./assets/icon/keyboard_icon_home.png" />
+          <button className="clear-dates">Clear dates</button>
         </div>
       </section>
     </div>

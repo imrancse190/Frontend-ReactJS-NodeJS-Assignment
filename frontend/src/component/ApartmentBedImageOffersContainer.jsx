@@ -56,25 +56,25 @@ const listData = [
 
 export const ApartmentBedImageOffersContainer = () => {
   return (
-    <div class="apartment-bedImage-offers-container">
-      <section class="sleeping-arrangements">
+    <div className="apartment-bedImage-offers-container">
+      <section className="sleeping-arrangements">
         <h2>Where you'll sleep</h2>
-        <div class="bedroom">
+        <div className="bedroom">
           <img
             src="./assets/images/bedroom1.jpg"
             alt="Bedroom"
-            class="bedroom-image"
+            className="bedroom-image"
           />
           <h3>Bedroom</h3>
           <p>1 double bed</p>
         </div>
       </section>
 
-      {/* <hr style="opacity: 15%; width: 100%" class="hr-for-mobile-version" /> */}
+      {/* <hr style="opacity: 15%; width: 100%" className="hr-for-mobile-version" /> */}
       {/* <!-- Benefits and offers of place  --> */}
-      <section class="amenities">
+      <section className="amenities">
         <h2>What this place offers</h2>
-        <ul class="amenities-list">
+        <ul className="amenities-list">
           {listData.map((value, index) => {
             return (
               <li key={index}>
@@ -88,7 +88,7 @@ export const ApartmentBedImageOffersContainer = () => {
             );
           })}
         </ul>
-        <button class="show-all-amenities">Show all 32 amenities</button>
+        <button className="show-all-amenities">Show all 32 amenities</button>
       </section>
     </div>
   );

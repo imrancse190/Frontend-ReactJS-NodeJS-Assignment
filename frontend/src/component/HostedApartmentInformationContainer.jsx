@@ -4,62 +4,66 @@ import { ShowMoreButton } from "./ShowMoreButton";
 export const HostedApartmentInformationContainer = () => {
   return (
     <div>
-      <header class="listing-header ">
-        <div class="header-items-title-for-mobile-device">
+      <header className="listing-header ">
+        <div className="header-items-title-for-mobile-device">
           Comfy New Apt. in Pueblo Libre!
         </div>
-        <div class="listing-title">Entire rental unit in Lima, Peru</div>
-        <p class="listing-details">2 guests · 1 bedroom · 1 bed · 1 bath</p>
-        <span class="listing-tag">
-          <img src="./assets/icon/star_icon_home.png" />
+        <div className="listing-title">Entire rental unit in Lima, Peru</div>
+        <p className="listing-details">2 guests · 1 bedroom · 1 bed · 1 bath</p>
+        <span className="listing-tag">
+          <img alt="" src="./assets/icon/star_icon_home.png" />
           New
         </span>
       </header>
 
       {/* <!-- Hosted profile --> */}
-      <section class="host-info">
-        <img src="./assets/images/user_demo_images.png" class="host-avatar" />
-        <div class="host-details">
-          <p class="host-name">Hosted by Fernando</p>
-          <p class="host-status">Superhost · 7 Years hosting</p>
+      <section className="host-info">
+        <img
+          alt=""
+          src="./assets/images/user_demo_images.png"
+          className="host-avatar"
+        />
+        <div className="host-details">
+          <p className="host-name">Hosted by Fernando</p>
+          <p className="host-status">Superhost · 7 Years hosting</p>
         </div>
       </section>
 
-      <section class="listing-features">
-        <div class="feature">
-          <i class="icon-key">
-            <img src="./assets/icon/smartLock_icon_home.png" />
+      <section className="listing-features">
+        <div className="feature">
+          <i className="icon-key">
+            <img alt="" src="./assets/icon/smartLock_icon_home.png" />
           </i>
           <div>
             <h4>Self check-in</h4>
-            <p class="feature-description">
+            <p className="feature-description">
               Check yourself in with the smartlock.
             </p>
           </div>
         </div>
-        <div class="feature">
-          <i class="icon-medal">
-            <img src="./assets/icon/superHost_icon_home.png" />
+        <div className="feature">
+          <i className="icon-medal">
+            <img alt="" src="./assets/icon/superHost_icon_home.png" />
           </i>
           <div>
             <h4>Fernando is a Superhost</h4>
-            <p class="feature-description">
+            <p className="feature-description">
               Superhosts are experienced, highly rated Hosts.
             </p>
           </div>
         </div>
       </section>
 
-      <div class="translation-notice">
+      <div className="translation-notice">
         <p>
           Some info has been automatically translated.
-          <a href="#" class="show-original">
+          <a href="#" className="show-original">
             Show original
           </a>
         </p>
       </div>
 
-      <section class="listing-description">
+      <section className="listing-description">
         <p>
           Welcome to our brand-new 1 bedroom apartment, in a quiet and central
           location next to a park!

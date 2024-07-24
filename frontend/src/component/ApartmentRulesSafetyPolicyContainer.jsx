@@ -32,13 +32,13 @@ const thingsToKnowData = [
 export const ApartmentRulesSafetyPolicyContainer = () => {
   return (
     <div>
-      <div class="things-to-know-container container-size">
-        <h2 class="things-to-know-title">Things to know</h2>
-        <div class="things-to-know-sections">
+      <div className="things-to-know-container container-size">
+        <h2 className="things-to-know-title">Things to know</h2>
+        <div className="things-to-know-sections">
           {thingsToKnowData.map((item, index) => {
             return (
-              <div class="things-to-know-section" key={index}>
-                <h3 class="things-to-know-subtitle">{item.subtitle}</h3>
+              <div className="things-to-know-section" key={index}>
+                <h3 className="things-to-know-subtitle">{item.subtitle}</h3>
                 {item.content.map((item, index) => {
                   return <p key={index}>{item}</p>;
                 })}

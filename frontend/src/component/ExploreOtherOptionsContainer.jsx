@@ -22,31 +22,31 @@ const otherStaysLinks = [
 export const ExploreOtherOptionsContainer = () => {
   return (
     <div className="footer-full-data">
-      <div class="explore-options-container">
-        <nav class="breadcrumb-nav container-size">
-          <a href="#" class="breadcrumb-link">
+      <div className="explore-options-container">
+        <nav className="breadcrumb-nav container-size">
+          <a href="#" className="breadcrumb-link">
             Peru
           </a>{" "}
           {" > "}
-          <a href="#" class="breadcrumb-link">
+          <a href="#" className="breadcrumb-link">
             {" "}
             Lima Province
           </a>{" "}
           {" > "}
-          <span class="breadcrumb-current">Jesús María</span>
+          <span className="breadcrumb-current">Jesús María</span>
         </nav>
 
         <hr style={{ opacity: "35%" }} />
 
-        <p class="explore-options-title container-size">
+        <p className="explore-options-title container-size">
           Explore other options in and around Lima
         </p>
-        <div class="explore-options-list container-size">
+        <div className="explore-options-list container-size">
           {exploreOptionsData.map((item, index) => {
             return (
-              <div class="explore-options-item" key={index}>
-                <h3 class="explore-options-location">{item.location}</h3>
-                <p class="explore-options-type">{item.type}</p>
+              <div className="explore-options-item" key={index}>
+                <h3 className="explore-options-location">{item.location}</h3>
+                <p className="explore-options-type">{item.type}</p>
               </div>
             );
           })}
@@ -54,13 +54,13 @@ export const ExploreOtherOptionsContainer = () => {
 
         <hr style={{ opacity: "35%" }} />
 
-        <h2 class="explore-options-subtitle container-size">
+        <h2 className="explore-options-subtitle container-size">
           Other types of stays on Airbnb
         </h2>
-        <div class="other-stays-list container-size">
+        <div className="other-stays-list container-size">
           {otherStaysLinks.map((item, index) => {
             return (
-              <a href="#" class="other-stays-link" key={index}>
+              <a href="#" className="other-stays-link" key={index}>
                 {item}
               </a>
             );
