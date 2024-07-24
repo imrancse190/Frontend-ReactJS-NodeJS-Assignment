@@ -38,7 +38,6 @@ const HeaderTitleSaveShare = () => {
   };
 
   const saveItemOnClick = () => {
-    console.log("item save");
     let save = localStorage.getItem("saveItem");
 
     save = save === "true";
@@ -67,8 +66,8 @@ const HeaderTitleSaveShare = () => {
         style={{ position: "relative" }}
       >
         <div className="header-items">
-          <div className="header-items-left-arrow header-item-image">
-            <img alt="" src="./assets/icon/arrow_back_left_icon_home.png" />
+          <div className="header-items-left-arrow">
+            <img src="./assets/icon/arrow_back_left_icon_home.png" alt="" />
           </div>
           <div className="header-items-title">
             Comfy New Apt. in Pueblo Libre!
@@ -79,7 +78,7 @@ const HeaderTitleSaveShare = () => {
               id="header-item-share-main-button"
               onClick={toggleViewShareModal}
             >
-              <img alt="" src="./assets/icon/ios_share_icon_header.png" />
+              <img src="./assets/icon/ios_share_icon_header.png" alt="" />
               <p>Share</p>
             </div>
             <div className="header-item-image" onClick={saveItemOnClick}>
