@@ -1,15 +1,29 @@
 import React from "react";
 import { ShowMoreButton } from "./ShowMoreButton";
+import { Link } from "react-router-dom";
 
-export const HostedApartmentInformationContainer = () => {
+export const HostedApartmentInformationContainer = ({
+  title,
+  host_information,
+  guest,
+  bathroom,
+  bedroom,
+  description,
+  address,
+}) => {
+  if (!host_information) {
+    return <p1>Loading....</p1>;
+  }
+  const hostInfoArray = host_information.split(",");
+  const host_name = hostInfoArray.slice(0, 1).join(", ");
   return (
     <div>
       <header className="listing-header ">
-        <div className="header-items-title-for-mobile-device">
-          Comfy New Apt. in Pueblo Libre!
-        </div>
-        <div className="listing-title">Entire rental unit in Lima, Peru</div>
-        <p className="listing-details">2 guests · 1 bedroom · 1 bed · 1 bath</p>
+        <div className="header-items-title-for-mobile-device">{title}</div>
+        <div className="listing-title">{address}</div>
+        <p className="listing-details">
+          {guest} guests · {bedroom} bedroom · 1 bed · {bathroom} bath
+        </p>
         <span className="listing-tag">
           <img alt="" src="./assets/icon/star_icon_home.png" />
           New
@@ -24,7 +38,7 @@ export const HostedApartmentInformationContainer = () => {
           className="host-avatar"
         />
         <div className="host-details">
-          <p className="host-name">Hosted by Fernando</p>
+          <p className="host-name">Hosted by {host_name}</p>
           <p className="host-status">Superhost · 7 Years hosting</p>
         </div>
       </section>
@@ -57,22 +71,19 @@ export const HostedApartmentInformationContainer = () => {
       <div className="translation-notice">
         <p>
           Some info has been automatically translated.
-          <a href="#" className="show-original">
+          <Link to="#" className="show-original">
             Show original
-          </a>
+          </Link>
         </p>
       </div>
 
       <section className="listing-description">
         <p>
-          Welcome to our brand-new 1 bedroom apartment, in a quiet and central
-          location next to a park!
+          Welcome to our brand-new {bedroom} bedroom apartment, in a quiet and
+          central location {address}!
         </p>
         <p>
-          It's conveniently located in Pueblo Libre, just 25min. away from the
-          airport. Steps away from Clínica Stella Maris, Universidad Antonio
-          Ruiz de Montoya, Instituto Británico, Hospital Santa Rosa, YMCA Peru
-          and Alas Peruanas University. It's also very close to La ...
+          It's conveniently located in {address}. {description}
         </p>
         <ShowMoreButton text="Show More" />
       </section>

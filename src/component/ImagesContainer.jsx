@@ -1,30 +1,25 @@
 import React, { useEffect, useState } from "react";
 
-const hotelImages = [];
-
-const ImagesContainer = () => {
+const ImagesContainer = ({ images }) => {
   const [viewImages, setViewImages] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    for (let i = 1; i <= 9; i++) {
-      if (hotelImages.length < 9)
-        hotelImages.push(`./assets/images/bedroom${i}.jpg`);
-    }
-  }, []);
 
   const viewAllImages = () => {
     setViewImages(!viewImages);
   };
 
   function changeImage(val) {
-    if (currentIndex + val === hotelImages.length) {
+    if (currentIndex + val === images.length) {
       setCurrentIndex(0);
     } else if (currentIndex + val === -1) {
-      setCurrentIndex(hotelImages.length - 1);
+      setCurrentIndex(images.length - 1);
     } else {
       setCurrentIndex(currentIndex + val);
     }
+  }
+
+  if (!images) {
+    return <div>Loading...</div>;
   }
   return (
     <div>
@@ -33,14 +28,15 @@ const ImagesContainer = () => {
         style={{ position: "relative" }}
       >
         <div className="gallery-first-image">
-          <img src="./assets/images/bedroom1.jpg" alt="Bedroom" />
+          <img src={`./assets/images/${images[4]}`} alt="Bedroom" />
         </div>
-        <div className="gallery-other-images">
-          <img src="./assets/images/bedroom2.jpg" alt="Living Room" />
-          <img src="./assets/images/bedroom3.jpg" alt="Kitchen" />
-          <img src="./assets/images/bedroom4.jpg" alt="Bathroom" />
-          <img src="./assets/images/bedroom5.jpg" alt="Entrance" />
-        </div>
+        {images && images.length > 0 && (
+          <div className="gallery-other-images">
+            {images.map((image, index) => (
+              <img key={index} src={`./assets/images/${image}`} alt="" />
+            ))}
+          </div>
+        )}
         <div
           className="gallery-show-all-photos"
           id="gallery-show-all-photos-id"
@@ -64,7 +60,7 @@ const ImagesContainer = () => {
             <div className="show_all_images_one_by_one-details">
               <div onClick={viewAllImages}>X Close</div>
               <div id="show-all-images-one-by-one-active-image-number">
-                {currentIndex + 1}/{hotelImages.length}
+                {currentIndex + 1}/{images.length}
               </div>
               <div className="show_all_images_one_by_one-share-save">
                 <div>Share</div>
@@ -80,7 +76,7 @@ const ImagesContainer = () => {
               </button>
               <div className="image-container">
                 <img
-                  src={hotelImages[currentIndex]}
+                  src={`./assets/images/${images[currentIndex]}`}
                   alt="Hotel room"
                   id="currentImage"
                 />

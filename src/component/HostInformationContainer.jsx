@@ -1,7 +1,15 @@
 import React from "react";
 import { ShowMoreButton } from "./ShowMoreButton";
 
-export const HostInformationContainer = () => {
+export const HostInformationContainer = ({ host_info }) => {
+  if (!host_info) {
+    return <p1>Loading....</p1>;
+  }
+  const hostInfoArray = host_info.split(",");
+  const host_name = hostInfoArray.slice(0, 1).join(", ");
+  const host_phone = hostInfoArray.slice(1, 2).join(", ");
+  const host_mail = hostInfoArray.slice(2, 3).join(", ");
+
   return (
     <div>
       <section className="host-profile container-size">
@@ -16,7 +24,7 @@ export const HostInformationContainer = () => {
                   className="host-photo"
                 />
 
-                <h3 className="host-name">Fernando</h3>
+                <h3 className="host-name">{host_name}</h3>
                 <p className="host-badge">🎖Superhost</p>
               </div>
               <div className="host-stats">
@@ -40,6 +48,12 @@ export const HostInformationContainer = () => {
               <p className="host-occupation">
                 <span className="icon">💼</span> My work: Hospitality
               </p>
+              <p className="host-occupation">
+                <span className="icon">📞</span> Phone: {host_phone}
+              </p>
+              <p className="host-occupation">
+                <span className="icon">📧</span> Email: {host_mail}
+              </p>
               <p className="host-bio">
                 Hello world! I love traveling and I also love welcoming guests
                 in my home country, Peru, meeting new...
@@ -47,11 +61,6 @@ export const HostInformationContainer = () => {
               <ShowMoreButton text="Show more" />
             </div>
           </div>
-
-          {/* <hr
-            style="opacity: 15%; width: 100%; margin-top: 20px"
-            className="hr-for-mobile-version"
-          /> */}
 
           <div className="host-details">
             <p className="superhost-description">Fernando is a Superhost</p>

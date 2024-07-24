@@ -4,11 +4,11 @@ import { HomePageItemCard } from "../component/HomePageItemCard";
 
 export const HomePage = () => {
   const [hotelsInfo, setHotelsInfo] = useState([]);
+
   const getAllHotels = () => {
     axios
       .get("http://localhost:3000/api/hotel")
       .then((data) => {
-        console.log(data.data);
         setHotelsInfo(data.data);
       })
       .catch((error) => console.log(error));

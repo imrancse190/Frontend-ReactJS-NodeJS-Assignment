@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Notification } from "./Notification";
 
-const HeaderTitleSaveShare = () => {
+const HeaderTitleSaveShare = ({ title }) => {
   const [viewShareModal, setViewShareModal] = useState(false);
   const [notification, setNotification] = useState("");
   const [itemSave, setItemSave] = useState(false);
@@ -69,9 +69,7 @@ const HeaderTitleSaveShare = () => {
           <div className="header-items-left-arrow">
             <img src="./assets/icon/arrow_back_left_icon_home.png" alt="" />
           </div>
-          <div className="header-items-title">
-            Comfy New Apt. in Pueblo Libre!
-          </div>
+          <div className="header-items-title">{title}</div>
           <div className="header-items-images">
             <div
               className="header-item-image"
