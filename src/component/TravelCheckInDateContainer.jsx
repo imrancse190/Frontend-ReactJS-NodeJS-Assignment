@@ -111,7 +111,11 @@ export const TravelCheckInDateContainer = () => {
             </div>
             <div className="calendar-grid">
               {JulyCalendarData.map((item, index) => {
-                return <div className={item.class}>{item.value}</div>;
+                return (
+                  <div className={item.class} key={index}>
+                    {item.value}
+                  </div>
+                );
               })}
             </div>
           </div>
@@ -124,7 +128,12 @@ export const TravelCheckInDateContainer = () => {
             </div>
             <div className="calendar-grid">
               {AugustCalendarData.map((item, index) => {
-                return <div className={item.class}>{item.value}</div>;
+                return (
+                  <div className={item.class} key={index}>
+                    {" "}
+                    {item.value}
+                  </div>
+                );
               })}
             </div>
           </div>

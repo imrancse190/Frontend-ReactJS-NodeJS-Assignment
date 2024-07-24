@@ -31,7 +31,7 @@ export const CheckAvailabilitySidebarContainer = () => {
         </form>
       </div>
       <a href="#" className="report-listing">
-        <image src="./assets/icon/flag_report_icon_body.png" />
+        <img src="./assets/icon/flag_report_icon_body.png" alt="" />
         <span>Report this listing</span>
       </a>
     </aside>
