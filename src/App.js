@@ -5,6 +5,7 @@ import { ExploreOtherOptionsContainer } from "./component/ExploreOtherOptionsCon
 import NavbarDesktop from "./component/NavbarDesktop";
 import { HomePage } from "./pages/HomePage";
 import { HotelDetailsPage } from "./pages/HotelDetailsPage";
+import { PageNotFound } from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/:slug" element={<HotelDetailsPage />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         {/* Footer */}
         <ApartmentRulesSafetyPolicyContainer />

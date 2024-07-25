@@ -17,6 +17,8 @@ export const HomePage = () => {
   useEffect(() => {
     getAllHotels();
   }, []);
+
+  console.log("hotelsInfo", hotelsInfo);
   return (
     <div
       className="container-size"

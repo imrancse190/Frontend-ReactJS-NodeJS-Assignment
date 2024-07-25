@@ -10,11 +10,13 @@ import { TravelCheckInDateContainer } from "../component/TravelCheckInDateContai
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { PageNotFound } from "./PageNotFound";
 
 export const HotelDetailsPage = () => {
   const [hotelInfo, setHotelInfo] = useState([]);
+  const [pageNotFound, setPageNotFound] = useState([false, ""]);
   const { slug } = useParams();
-  console.log(slug);
+
   const getAllHotels = () => {
     axios
       .get(`http://localhost:3000/api/hotel/${slug}`)
@@ -22,12 +24,19 @@ export const HotelDetailsPage = () => {
         console.log(data.data);
         setHotelInfo(data.data);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        setPageNotFound([true, error.message]);
+      });
   };
 
   useEffect(() => {
     getAllHotels();
   }, []);
+
+  if (pageNotFound[0]) {
+    return <PageNotFound message={pageNotFound[1]} />;
+  }
 
   return (
     <div className="App">
@@ -44,7 +53,7 @@ export const HotelDetailsPage = () => {
             description={hotelInfo.description}
             address={hotelInfo.address}
           />
-          <ApartmentBedImageOffersContainer />
+          <ApartmentBedImageOffersContainer amenities={hotelInfo.amenities} />
           <TravelCheckInDateContainer />
         </div>
         <div>

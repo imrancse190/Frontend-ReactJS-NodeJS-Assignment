@@ -1,72 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
-// ./assets/icon/place_offers/
-const listData = [
-  {
-    class: "icon-kitchen",
-    imageSrc: "kitchen.svg",
-    innerText: "Kitchen",
-  },
-  {
-    class: "icon-wifi",
-    imageSrc: "wifi.png",
-    innerText: "Wifi",
-  },
-  {
-    class: "icon-tv",
-    imageSrc: "tv.png",
-    innerText: "TV",
-  },
-  {
-    class: "icon-elevator",
-    imageSrc: "elevator.png",
-    innerText: "Elevator",
-  },
-  {
-    class: "icon-washer",
-    imageSrc: "washer_dryer.png",
-    innerText: "Washer",
-  },
-  {
-    class: "icon-dryer",
-    imageSrc: "washer_dryer.png",
-    innerText: "Dryer",
-  },
-  {
-    class: "icon-hairdryer",
-    imageSrc: "hairdryer.png",
-    innerText: "Hair dryer",
-  },
-  {
-    class: "icon-refrigerator",
-    imageSrc: "refrigerator.png",
-    innerText: "Refrigerator",
-  },
-  {
-    class: "icon-co-alarm",
-    imageSrc: "carbon_alarm.png",
-    innerText: "Carbon monoxide alarm",
-  },
-  {
-    class: "icon-smoke-alarm",
-    imageSrc: "smoke_alarm.png",
-    innerText: "Smoke alarm",
-  },
-];
+export const ApartmentBedImageOffersContainer = ({ amenities }) => {
+  const [roomsInfo, setRoomsInfo] = useState([]);
+  const { slug } = useParams();
 
-export const ApartmentBedImageOffersContainer = () => {
+  const getAllRooms = () => {
+    axios
+      .get(`http://localhost:3000/api/hotel/${slug}/room`)
+      .then((data) => {
+        // console.log(data.data);
+        setRoomsInfo(data.data);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    getAllRooms();
+  }, []);
+
+  if (!amenities) {
+    return <div>Loading</div>;
+  }
+
   return (
     <div className="apartment-bedImage-offers-container">
       <section className="sleeping-arrangements">
         <h2>Where you'll sleep</h2>
-        <div className="bedroom">
-          <img
-            src="./assets/images/bedroom1.jpg"
-            alt="Bedroom"
-            className="bedroom-image"
-          />
-          <h3>Bedroom</h3>
-          <p>1 double bed</p>
+        <div className="bedroom" style={{ display: "flex", flexWrap: "wrap" }}>
+          {roomsInfo.map((value, index) => {
+            return (
+              <div style={{ paddingRight: "10px" }} key={index}>
+                <img
+                  src={`./assets/images/${value.room_image}`}
+                  alt="Bedroom"
+                  className="bedroom-image"
+                />
+                <h3>{value.room_title}</h3>
+                <p>{value.bedroom_count} double bed</p>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -75,15 +50,15 @@ export const ApartmentBedImageOffersContainer = () => {
       <section className="amenities">
         <h2>What this place offers</h2>
         <ul className="amenities-list">
-          {listData.map((value, index) => {
+          {amenities.map((value, index) => {
             return (
               <li key={index}>
-                <i className={value.class}></i>
+                {/* <i className={value.class}></i> */}
                 <img
-                  src={`./assets/icon/place_offers/${value.imageSrc}`}
-                  alt={value.innerText}
+                  src={`./assets/icon/review_star_icon_home.png`}
+                  alt=""
                 />{" "}
-                {value.innerText}
+                {value}
               </li>
             );
           })}
