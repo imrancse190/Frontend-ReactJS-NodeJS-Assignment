@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const PageNotFound = ({ message = "404. That's an error." }) => {
   return (
@@ -10,6 +11,9 @@ export const PageNotFound = ({ message = "404. That's an error." }) => {
           The requested <b>URL was not found</b> on this server.
         </div>
         <div className="page-not-found-robot">🤖</div>
+        <Link to="/">
+          <h1>Go back to home</h1>
+        </Link>
       </div>
     </div>
   );

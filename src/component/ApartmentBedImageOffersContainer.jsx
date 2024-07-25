@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { ShimmerLoaderText } from "./ShimmerLoaderText";
+import api from "../services/api";
 
 export const ApartmentBedImageOffersContainer = ({ amenities }) => {
   const [roomsInfo, setRoomsInfo] = useState([]);
   const { slug } = useParams();
 
   const getAllRooms = () => {
-    axios
-      .get(`http://localhost:3000/api/hotel/${slug}/room`)
+    api
+      .get(`/hotel/${slug}/room`)
       .then((data) => {
         // console.log(data.data);
         setRoomsInfo(data.data);

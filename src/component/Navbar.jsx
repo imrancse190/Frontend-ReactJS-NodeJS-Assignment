@@ -1,12 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { NavbarSearchBar } from "./NavbarSearchBar";
 
-const NavbarDesktop = () => {
-  const searchItemShow = () => {
-    // Implement the searchItemShow function here
-    console.log("Search item show function called");
-  };
-
+export const Navbar = () => {
   return (
     <div>
       <nav className="navbar border-bottom-navbar">
@@ -16,7 +12,7 @@ const NavbarDesktop = () => {
               <img src="/assets/icon/online-booking.png" alt="Logo" />
             </Link>
           </div>
-          <div onClick={searchItemShow}>
+          <div>
             <div
               className="stay-experiences-navbar hidden"
               id="stay-experiences-navbar-id"
@@ -69,8 +65,8 @@ const NavbarDesktop = () => {
           </div>
         </div>
       </nav>
+
+      <NavbarSearchBar />
     </div>
   );
 };
-
-export default NavbarDesktop;

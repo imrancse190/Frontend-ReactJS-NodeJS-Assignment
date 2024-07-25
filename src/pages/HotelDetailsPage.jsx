@@ -11,6 +11,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { PageNotFound } from "./PageNotFound";
+import api from "../services/api";
 
 export const HotelDetailsPage = () => {
   const [hotelInfo, setHotelInfo] = useState([]);
@@ -18,8 +19,8 @@ export const HotelDetailsPage = () => {
   const { slug } = useParams();
 
   const getAllHotels = () => {
-    axios
-      .get(`http://localhost:3000/api/hotel/${slug}`)
+    api
+      .get(`/hotel/${slug}`)
       .then((data) => {
         console.log(data.data);
         setHotelInfo(data.data);

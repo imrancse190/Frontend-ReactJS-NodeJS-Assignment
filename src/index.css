@@ -136,6 +136,7 @@ button {
 .globe-icon img {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .menu-icon-button {
@@ -145,6 +146,7 @@ button {
   border-radius: 30px;
   padding: 8px 10px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .menu-icon-button img {
@@ -155,6 +157,70 @@ button {
 }
 
 /* after the click the new navbar */
+.navbar-search-stay-experiences {
+  display: flex;
+  justify-content: center;
+}
+.navbar-search-stay-experiences > div {
+  display: flex;
+  padding: 10px;
+  font-style: bold;
+}
+
+.navbar-search-box {
+  display: flex;
+  border: 1px solid rgb(224, 224, 224);
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 14px;
+  border-radius: 35px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0px 3px 10px -5px rgba(0, 0, 0, 0.295);
+}
+#navbar-search-where {
+  width: 35%;
+  padding: 0px 15px 0px 20px;
+  border-right: 1px solid rgb(224, 224, 224);
+}
+.bold-text {
+  font-weight: bold;
+}
+.light-text {
+  font-weight: lighter;
+}
+#navbar-search-check-in {
+  width: 15%;
+  padding: 0px 15px 0px 15px;
+  border-right: 1px solid rgb(224, 224, 224);
+}
+#navbar-search-check-out {
+  width: 15%;
+  padding: 0px 15px 0px 15px;
+  border-right: 1px solid rgb(224, 224, 224);
+}
+
+#navbar-search-guest-search-button {
+  display: flex;
+  width: 35%;
+  padding: 0px 5px 0px 15px;
+  justify-content: space-between;
+}
+.navbar-search-search-button {
+  background: #d41193;
+  border-radius: 35px;
+  width: 55px;
+  margin: -5px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-search-search-button img {
+  width: 25px;
+  height: 25px;
+}
 .search-navbar {
   display: flex;
   justify-content: center;

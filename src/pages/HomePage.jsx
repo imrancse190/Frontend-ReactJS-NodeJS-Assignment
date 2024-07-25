@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+
 import { HomePageItemCard } from "../component/HomePageItemCard";
 import { ShimmerLoaderHome } from "../component/ShimmerLoaderHome";
+import api from "../services/api";
 
 export const HomePage = () => {
   const [hotelsInfo, setHotelsInfo] = useState(null);
 
   const getAllHotels = () => {
-    axios
-      .get("http://localhost:3000/api/hotel")
+    api
+      .get("/hotel")
       .then((data) => {
         setHotelsInfo(data.data);
       })

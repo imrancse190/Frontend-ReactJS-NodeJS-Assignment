@@ -15,17 +15,17 @@ export const LocationContainer = ({ location, latitude, longitude }) => {
         </p>
 
         <div className="location-map">
-          <img alt="" src="./assets/images/map_image.png" />
-          {/* <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450699!2d144.9630573153186!3d-37.8162799797519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5773a81e47caf5d!2sMelbourne%2C%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1627779227808!5m2!1sen!2sus"
-            width="600"
+          {/* <img alt="" src="./assets/images/map_image.png" /> */}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29205.054591750028!2d90.4036352!3d23.7961216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1721896319011!5m2!1sen!2sbd"
+            width="100%"
             height="450"
             style={{ border: 0 }}
-            allowFullScreen=""
+            allowfullscreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerpolicy="no-referrer-when-downgrade"
             title="Google Map"
-          ></iframe> */}
+          ></iframe>
         </div>
         <ShowMoreButton text="Show More" />
       </section>
