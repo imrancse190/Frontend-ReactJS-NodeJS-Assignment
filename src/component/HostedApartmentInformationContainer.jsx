@@ -1,6 +1,8 @@
 import React from "react";
 import { ShowMoreButton } from "./ShowMoreButton";
 import { Link } from "react-router-dom";
+import { ShimmerLoaderText } from "./ShimmerLoaderText";
+import { ShimmerLoaderHome } from "./ShimmerLoaderHome";
 
 export const HostedApartmentInformationContainer = ({
   title,
@@ -12,7 +14,16 @@ export const HostedApartmentInformationContainer = ({
   address,
 }) => {
   if (!host_information) {
-    return <p1>Loading....</p1>;
+    return (
+      <>
+        <ShimmerLoaderHome />
+        <ShimmerLoaderText />
+        <ShimmerLoaderText />
+        <ShimmerLoaderText />
+        <ShimmerLoaderText />
+        <ShimmerLoaderText />
+      </>
+    );
   }
   const hostInfoArray = host_information.split(",");
   const host_name = hostInfoArray.slice(0, 1).join(", ");

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { ShimmerLoaderHome } from "./ShimmerLoaderHome";
 
 const ImagesContainer = ({ images }) => {
   const [viewImages, setViewImages] = useState(false);
@@ -19,7 +20,11 @@ const ImagesContainer = ({ images }) => {
   }
 
   if (!images) {
-    return <div>Loading...</div>;
+    return (
+      <div style={{ margin: "10px" }}>
+        <ShimmerLoaderHome />
+      </div>
+    );
   }
   return (
     <div>

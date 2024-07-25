@@ -1,9 +1,14 @@
 import React from "react";
 import { ShowMoreButton } from "./ShowMoreButton";
+import { ShimmerLoaderHome } from "./ShimmerLoaderHome";
 
 export const HostInformationContainer = ({ host_info }) => {
   if (!host_info) {
-    return <p1>Loading....</p1>;
+    return (
+      <div className="container-size">
+        <ShimmerLoaderHome />
+      </div>
+    );
   }
   const hostInfoArray = host_info.split(",");
   const host_name = hostInfoArray.slice(0, 1).join(", ");

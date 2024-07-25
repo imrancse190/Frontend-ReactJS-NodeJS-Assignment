@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { ShimmerLoaderText } from "./ShimmerLoaderText";
 
 export const ApartmentBedImageOffersContainer = ({ amenities }) => {
   const [roomsInfo, setRoomsInfo] = useState([]);
@@ -21,7 +22,11 @@ export const ApartmentBedImageOffersContainer = ({ amenities }) => {
   }, []);
 
   if (!amenities) {
-    return <div>Loading</div>;
+    return (
+      <div>
+        <ShimmerLoaderText />
+      </div>
+    );
   }
 
   return (

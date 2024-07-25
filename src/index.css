@@ -490,6 +490,7 @@ button {
 .header-items-title {
   font-size: 24px;
   font-weight: bold;
+  width: 100%;
 }
 .header-items-images {
   display: flex;
@@ -1978,4 +1979,80 @@ button {
 
 .notification.show {
   display: block;
+}
+
+/* Shimmer Loader home style */
+.shimmer-loader-container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.shimmer-loader-item {
+  height: 20px;
+  background: #ddd;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.shimmer-loader-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.shimmer-loader-title {
+  width: 85%;
+}
+
+.shimmer-loader-text {
+  width: 100%;
+}
+
+.shimmer-loader-text:last-child {
+  width: 60%;
+}
+
+.shimmer-loader-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: shimmer-loader-keyframes 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@keyframes shimmer-loader-keyframes {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .shimmer-loader-container {
+    padding: 10px;
+  }
+
+  .shimmer-loader-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .shimmer-loader-item {
+    height: 15px;
+    margin-bottom: 15px;
+  }
 }

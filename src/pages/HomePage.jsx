@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { HomePageItemCard } from "../component/HomePageItemCard";
+import { ShimmerLoaderHome } from "../component/ShimmerLoaderHome";
 
 export const HomePage = () => {
-  const [hotelsInfo, setHotelsInfo] = useState([]);
+  const [hotelsInfo, setHotelsInfo] = useState(null);
 
   const getAllHotels = () => {
     axios
@@ -18,7 +19,15 @@ export const HomePage = () => {
     getAllHotels();
   }, []);
 
-  console.log("hotelsInfo", hotelsInfo);
+  if (!hotelsInfo) {
+    return (
+      <div className="container-size">
+        <ShimmerLoaderHome />
+        <ShimmerLoaderHome />
+        <ShimmerLoaderHome />
+      </div>
+    );
+  }
   return (
     <div
       className="container-size"

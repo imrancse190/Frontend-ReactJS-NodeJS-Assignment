@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Notification } from "./Notification";
 import { ShareModal } from "./ShareModal";
+import { ShimmerLoaderText } from "./ShimmerLoaderText";
 
 const HeaderTitleSaveShare = ({ title }) => {
   const [viewShareModal, setViewShareModal] = useState(false);
@@ -54,7 +55,9 @@ const HeaderTitleSaveShare = ({ title }) => {
           <div className="header-items-left-arrow">
             <img src="./assets/icon/arrow_back_left_icon_home.png" alt="" />
           </div>
-          <div className="header-items-title">{title}</div>
+          <div className="header-items-title">
+            {title ? title : <ShimmerLoaderText />}
+          </div>
           <div className="header-items-images">
             <div
               className="header-item-image"
