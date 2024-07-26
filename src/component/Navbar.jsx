@@ -10,7 +10,7 @@ export const Navbar = () => {
         <nav className="navbar ">
           <div className="navbar-content container-size">
             <div className="navbar-content-logo">
-              <Link to="/" className="hidden-mobile">
+              <Link to="/">
                 <img src="/assets/icon/online-booking.png" alt="Logo" />
               </Link>
             </div>
@@ -50,12 +50,13 @@ export const Navbar = () => {
                       src="/assets/icon/search-icon-navbar.png"
                       alt="Search"
                     />
+                    <div className="navbar-search-button-mobile">Search</div>
                   </button>
                 </div>
               )}
             </div>
             <div className="user-controls">
-              <button className="globe-icon-button hidden-mobile">
+              <button className="globe-icon-button">
                 <i className="globe-icon ">
                   <img
                     src="/assets/icon/language_icon_navbar.png"
@@ -65,11 +66,7 @@ export const Navbar = () => {
               </button>
 
               <button className="menu-icon-button">
-                <img
-                  src="/assets/icon/menu_icon_navbar.png"
-                  alt="Menu"
-                  className="hidden-mobile"
-                />
+                <img src="/assets/icon/menu_icon_navbar.png" alt="Menu" />
                 <img
                   src="/assets/icon/account_circle_icon_navbar.png"
                   alt="Account"

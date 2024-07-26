@@ -94,6 +94,11 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   padding: 8px 10px;
+  transition: border 0.2s ease-in;
+}
+.search-container:hover {
+  border: 1px solid #bebebe;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search-input {
@@ -616,10 +621,11 @@ button {
   justify-content: center;
   align-items: center;
   padding-right: 10px;
+  transition: background 0.2s ease-in-out;
+  border-radius: 25px;
 }
 .header-item-image:hover {
   background: rgb(241, 241, 241);
-  border-radius: 25px;
 }
 .save-item-background-color {
   background: #ee0380;
@@ -1651,6 +1657,11 @@ button {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.item-card-container:hover {
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
 }
 
 .item-card-image-wrapper {
@@ -1791,6 +1802,9 @@ button {
     rgba(255, 255, 255, 0) 100%
   );
 }
+.navbar-search-button-mobile {
+  display: none;
+}
 
 @keyframes shimmer-loader-keyframes {
   0% {
@@ -1798,22 +1812,6 @@ button {
   }
   100% {
     transform: translateX(100%);
-  }
-}
-
-@media (max-width: 480px) {
-  .shimmer-loader-container {
-    padding: 10px;
-  }
-
-  .shimmer-loader-avatar {
-    width: 40px;
-    height: 40px;
-  }
-
-  .shimmer-loader-item {
-    height: 15px;
-    margin-bottom: 15px;
   }
 }
 
@@ -1864,13 +1862,28 @@ button {
   }
 
   .search-container {
-    max-width: 210px;
-    display: flex;
+    width: 100px;
+    margin: 0px;
+    padding: 10px;
+    cursor: pointer;
   }
+
   .search-input {
-    max-width: 55px;
-    font-size: 10px;
-    padding: 0px;
+    display: none;
+  }
+  .search-button {
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background: #ff385d;
+  }
+  .navbar-search-button-mobile {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
   }
 
   .search-navbar {
@@ -2247,6 +2260,35 @@ button {
 
   .hidden-mobile {
     display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .item-card-container {
+    width: calc(100vw - 60px);
+  }
+}
+
+@media (max-width: 480px) {
+  .shimmer-loader-container {
+    padding: 10px;
+  }
+
+  .shimmer-loader-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .shimmer-loader-item {
+    height: 15px;
+    margin-bottom: 15px;
+  }
+
+  .navbar-search-stay-experiences > div {
+    display: flex;
+    padding: 2px;
+    font-style: bold;
+    font-size: 10px;
   }
 }
 

@@ -27,7 +27,7 @@ const ImagesContainer = ({ images }) => {
 
   if (!images) {
     return (
-      <div style={{ margin: "10px" }}>
+      <div className="container-size">
         <ShimmerLoaderHome />
       </div>
     );
@@ -92,7 +92,9 @@ const ImagesContainer = ({ images }) => {
                   ↪️ Share
                 </h4>
 
-                <SaveItemButton />
+                <div style={{ marginTop: "5px" }}>
+                  <SaveItemButton />
+                </div>
               </div>
             </div>
             <div className="show-all-images-image-container">

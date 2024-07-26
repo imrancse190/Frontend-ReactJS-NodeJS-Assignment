@@ -7,12 +7,14 @@ import { HomePage } from "./pages/HomePage";
 import { HotelDetailsPage } from "./pages/HotelDetailsPage";
 import { PageNotFound } from "./pages/PageNotFound";
 import { Navbar } from "./component/Navbar";
+import { DownloadApplicationNotificationMobile } from "./component/DownloadApplicationNotificationMobile";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         {/* Navbar */}
+        <DownloadApplicationNotificationMobile />
         <Navbar />
         {/* Body */}
         <Routes>
