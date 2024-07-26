@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Notification } from "./Notification";
 import { ShareModal } from "./ShareModal";
 import { ShimmerLoaderText } from "./ShimmerLoaderText";
+import { SaveItemButton } from "./SaveItemButton";
 
 const HeaderTitleSaveShare = ({ title }) => {
   const [viewShareModal, setViewShareModal] = useState(false);
@@ -67,16 +67,7 @@ const HeaderTitleSaveShare = ({ title }) => {
               <img src="./assets/icon/ios_share_icon_header.png" alt="" />
               <p>Share</p>
             </div>
-            <div className="header-item-image" onClick={saveItemOnClick}>
-              <img
-                src={`./assets/icon/favorite_icon_header${
-                  itemSave ? "_save" : ""
-                }.png`}
-                id="saveitemImage"
-                alt=""
-              />
-              <p>Save</p>
-            </div>
+            <SaveItemButton />
           </div>
         </div>
 
@@ -113,7 +104,6 @@ const HeaderTitleSaveShare = ({ title }) => {
         {viewShareModal && (
           <ShareModal toggleViewShareModal={toggleViewShareModal} />
         )}
-        <Notification text={notification} />
       </div>
     </div>
   );

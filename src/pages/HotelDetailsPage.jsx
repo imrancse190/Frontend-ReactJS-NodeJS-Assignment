@@ -33,7 +33,7 @@ export const HotelDetailsPage = () => {
 
   useEffect(() => {
     getAllHotels();
-  });
+  }, []);
 
   if (pageNotFound[0]) {
     return <PageNotFound message={pageNotFound[1]} />;

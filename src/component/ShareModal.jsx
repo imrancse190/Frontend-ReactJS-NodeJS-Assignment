@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Notification } from "./Notification";
 
 export const ShareModal = ({ toggleViewShareModal }) => {
   const [notification, setNotification] = useState("");
+  const modalRef = useRef();
+
   const copyLinkButtonClick = () => {
     let currentUrl = window.location.href;
     navigator.clipboard
@@ -19,11 +21,23 @@ export const ShareModal = ({ toggleViewShareModal }) => {
       });
   };
 
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      toggleViewShareModal();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div>
-      {" "}
       <div className="" id="header-item-share-modal-all">
-        <div className="header-item-share-modal">
+        <div className="header-item-share-modal" ref={modalRef}>
           <div
             className="header-item-share-close"
             onClick={toggleViewShareModal}

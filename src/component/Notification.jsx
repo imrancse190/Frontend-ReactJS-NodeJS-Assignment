@@ -14,12 +14,12 @@ export const Notification = ({ text }) => {
   }, [text]);
 
   return (
-    <div>
+    <>
       {visible && (
-        <div className="notification" id="notification">
+        <div className="notification">
           <span id="notification-message">{text}</span>
         </div>
       )}
-    </div>
+    </>
   );
 };
