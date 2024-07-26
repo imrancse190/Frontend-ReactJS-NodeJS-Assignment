@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavbarSearchBar } from "./NavbarSearchBar";
 
-
 export const Navbar = () => {
   const [visibleSearchBar, setVisibleSearchBar] = useState(false);
   return (
@@ -16,41 +15,48 @@ export const Navbar = () => {
               </Link>
             </div>
             <div onClick={() => setVisibleSearchBar(!visibleSearchBar)}>
-              {visibleSearchBar&&<div className="navbar-search-stay-experiences">
-                <div>Stay</div>
-                <div>Experiences</div>
-                <div>Close</div>
-              </div>}
+              {visibleSearchBar && (
+                <div className="navbar-search-stay-experiences">
+                  <div>Stay</div>
+                  <div>Experiences</div>
+                  <div>Close</div>
+                </div>
+              )}
 
-              {!visibleSearchBar&&<div className="search-container" id="navbar-search-apartment">
-                <input
-                  type="text"
-                  placeholder="Anywhere"
-                  className="search-input"
-                  id="navbar-search-anywhere"
-                />
+              {!visibleSearchBar && (
+                <div className="search-container" id="navbar-search-apartment">
+                  <input
+                    type="text"
+                    placeholder="Anywhere"
+                    className="search-input"
+                    id="navbar-search-anywhere"
+                  />
 
-                <input
-                  type="text"
-                  placeholder="Any week"
-                  className="search-input"
-                  id="navbar-search-anyweek"
-                />
+                  <input
+                    type="text"
+                    placeholder="Any week"
+                    className="search-input"
+                    id="navbar-search-anyweek"
+                  />
 
-                <input
-                  type="text"
-                  placeholder="Add guests"
-                  className="search-input"
-                  id="navbar-search-anyguests"
-                />
-                <button className="search-button">
-                  <img src="/assets/icon/search-icon-navbar.png" alt="Search" />
-                </button>
-              </div>}
+                  <input
+                    type="text"
+                    placeholder="Add guests"
+                    className="search-input"
+                    id="navbar-search-anyguests"
+                  />
+                  <button className="search-button">
+                    <img
+                      src="/assets/icon/search-icon-navbar.png"
+                      alt="Search"
+                    />
+                  </button>
+                </div>
+              )}
             </div>
-            <div className="user-controls" >
+            <div className="user-controls">
               <button className="globe-icon-button hidden-mobile">
-                <i className="globe-icon " >
+                <i className="globe-icon ">
                   <img
                     src="/assets/icon/language_icon_navbar.png"
                     alt="Language"
@@ -59,7 +65,11 @@ export const Navbar = () => {
               </button>
 
               <button className="menu-icon-button">
-                <img src="/assets/icon/menu_icon_navbar.png" alt="Menu"  className="hidden-mobile"/>
+                <img
+                  src="/assets/icon/menu_icon_navbar.png"
+                  alt="Menu"
+                  className="hidden-mobile"
+                />
                 <img
                   src="/assets/icon/account_circle_icon_navbar.png"
                   alt="Account"
@@ -67,15 +77,13 @@ export const Navbar = () => {
               </button>
             </div>
           </div>
-
         </nav>
         <div>
-          {visibleSearchBar && <NavbarSearchBar />}
+          {visibleSearchBar && (
+            <NavbarSearchBar setVisibleSearchBar={setVisibleSearchBar} />
+          )}
         </div>
       </div>
-
-
-
     </div>
   );
 };

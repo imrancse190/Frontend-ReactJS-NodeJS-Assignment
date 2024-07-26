@@ -361,7 +361,7 @@ button {
 /* Searchbar map container css */
 .navbar-search-map-container {
   position: absolute;
-  max-width: 700px;
+  width: 500px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -2174,21 +2174,25 @@ button {
     border-right: 1px solid rgb(224, 224, 224);
     padding-left: 5px;
     padding-right: 2px;
+    border-radius: 0px;
   }
   #navbar-search-check-in {
     width: 20%;
     padding-left: 2px;
     padding-right: 2px;
+    border-radius: 0px;
   }
   #navbar-search-check-out {
     width: 20%;
     padding-left: 2px;
     padding-right: 2px;
+    border-radius: 0px;
   }
   #navbar-search-guest-search-button {
     width: 40%;
     padding-left: 2px;
     padding-right: 2px;
+    border-radius: 0px;
   }
   #navbar-search-guest {
     padding-left: 2px;
@@ -2205,12 +2209,12 @@ button {
   }
   .navbar-search-map-container {
     position: absolute;
-    width: screen;
+    width: 98%;
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(167, 167, 167);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.144);
     padding: 20px;
-
     z-index: 101;
     top: 0%;
     left: 50%;
@@ -2227,6 +2231,18 @@ button {
     left: 50%;
     transform: translate(-50%, 2%);
     width: 100%;
+  }
+  .search-navbar-item-guests-container {
+    position: absolute;
+    z-index: 102;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 98%;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 5%);
   }
 
   .hidden-mobile {

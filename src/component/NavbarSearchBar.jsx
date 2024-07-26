@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import MyDatePicker from "./MyDatePicker";
 
-export const NavbarSearchBar = () => {
+export const NavbarSearchBar = ({ setVisibleSearchBar }) => {
   const [where, setWhere] = useState("Destinations");
   const [checkIn, setCheckIn] = useState(null);
   const [checkOut, setCheckOut] = useState(null);
@@ -148,7 +148,10 @@ export const NavbarSearchBar = () => {
                   : "Guests"}
               </div>
             </div>
-            <div className="navbar-search-search-button">
+            <div
+              className="navbar-search-search-button"
+              onClick={() => setVisibleSearchBar(false)}
+            >
               <img src="./assets/icon/search-icon-navbar.png" alt="" />
             </div>
           </div>
@@ -166,7 +169,7 @@ export const NavbarSearchBar = () => {
             >
               <div className="navbar-search-map-title">Search by region</div>
               <div style={{ cursor: "pointer" }} onClick={() => toggleView(0)}>
-                X
+                ❎
               </div>
             </div>
             <div className="navbar-search-map-grid">
@@ -218,6 +221,19 @@ export const NavbarSearchBar = () => {
         {(visibleState[1] || visibleState[2]) && (
           <div ref={datePickerRef} className="navbar-search-date-picker">
             <div className="navbar-search-date-picker-div">
+              <div
+                style={{
+                  fontWeight: "bold",
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "center",
+                  marginBottom: "10px",
+                  cursor: "pointer",
+                }}
+                onClick={() => toggleView(-1)}
+              >
+                Close ❎
+              </div>
               <div className="navbar-search-date-picker-date-month-flexible">
                 <div>
                   <div>Dates</div>
@@ -311,6 +327,19 @@ export const NavbarSearchBar = () => {
         )}
         {visibleState[3] && (
           <div ref={guestsRef} className="search-navbar-item-guests-container">
+            <div
+              style={{
+                fontWeight: "bold",
+                display: "flex",
+                width: "100%",
+                justifyContent: "center",
+                marginBottom: "10px",
+                cursor: "pointer",
+              }}
+              onClick={() => toggleView(-1)}
+            >
+              Close ❎
+            </div>
             <div className="search-navbar-item-guests-group">
               <div className="search-navbar-item-guests-label">
                 Adults
