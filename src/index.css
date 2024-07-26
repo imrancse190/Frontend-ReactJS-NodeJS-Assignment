@@ -1817,6 +1817,29 @@ button {
   }
 }
 
+/* For the mobile and tab searchbar */
+@media (max-width: 1000px) {
+  .navbar-search-box {
+    margin-left: 0%;
+    margin-right: 0%;
+    border-radius: 35px;
+  }
+  #navbar-search-where {
+    width: 25%;
+    padding: 10px 15px 10px 20px;
+    border-right: 1px solid rgb(224, 224, 224);
+  }
+  #navbar-search-check-in {
+    width: 20%;
+  }
+  #navbar-search-check-out {
+    width: 20%;
+  }
+  #navbar-search-guest-search-button {
+    width: 35%;
+  }
+}
+
 /* ============================================================== */
 /* ============================================================== */
 /* ============================================================== */
@@ -1872,38 +1895,12 @@ button {
   #date-picker-2 {
     display: none;
   }
-  .navbar-search-date-picker {
-    width: 400px;
-    left: -600px;
-  }
+
   .navbar-search-date-picker-calendar {
     display: flex;
     justify-content: center;
     margin: 0px;
     padding: 0px;
-  }
-
-  .navbar-search-map-container {
-    position: absolute;
-    width: 400px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    z-index: 101;
-    left: -480px;
-    top: 40px;
-  }
-
-  .navbar-search-date-picker {
-    position: absolute;
-    padding: 30px;
-    border: 1px solid rgb(226, 226, 226);
-    border-radius: 25px;
-    background: #ffffff;
-    z-index: 101;
-    top: 40px;
-    left: -500px;
   }
 
   /* Main Body */
@@ -2153,36 +2150,87 @@ button {
   }
 
   .navbar-search-box {
-    margin-left: 0%;
-    margin-right: 0%;
-    border-radius: 35px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .navbar-search-search-button {
+    background: #ff385c;
+    border-radius: 5px;
+    width: 45px;
+    margin: 5px;
+    height: inherit;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #navbar-search-where {
+    width: 20%;
+    padding: 10px 15px 10px 20px;
+    border-right: 1px solid rgb(224, 224, 224);
+    padding-left: 5px;
+    padding-right: 2px;
+  }
+  #navbar-search-check-in {
+    width: 20%;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  #navbar-search-check-out {
+    width: 20%;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  #navbar-search-guest-search-button {
+    width: 40%;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  #navbar-search-guest {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .navbar-search-hover-effect {
+    border-radius: 5px;
+  }
+  .navbar-search-hover-effect-after-click {
+    border-radius: 5px;
+  }
+  .navbar-search-hover-effect:hover {
+    border-radius: 5px;
+  }
+  .navbar-search-map-container {
+    position: absolute;
+    width: screen;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    z-index: 101;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 5%);
+  }
+  .navbar-search-date-picker {
+    position: absolute;
+    padding: 30px 5px 30px 5px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 25px;
+    background: #ffffff;
+    z-index: 101;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 2%);
+    width: 100%;
   }
 
   .hidden-mobile {
     display: none;
-  }
-}
-
-/* For the mobile and tab searchbar */
-@media (max-width: 1000px) {
-  .navbar-search-box {
-    margin-left: 0%;
-    margin-right: 0%;
-    border-radius: 35px;
-  }
-  #navbar-search-where {
-    width: 25%;
-    padding: 10px 15px 10px 20px;
-    border-right: 1px solid rgb(224, 224, 224);
-  }
-  #navbar-search-check-in {
-    width: 20%;
-  }
-  #navbar-search-check-out {
-    width: 20%;
-  }
-  #navbar-search-guest-search-button {
-    width: 35%;
   }
 }
 

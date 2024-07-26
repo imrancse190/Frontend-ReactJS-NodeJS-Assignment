@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ShareModal } from "./ShareModal";
 import { ShimmerLoaderText } from "./ShimmerLoaderText";
 import { SaveItemButton } from "./SaveItemButton";
+import { Link } from "react-router-dom";
 
 const HeaderTitleSaveShare = ({ title }) => {
   const [viewShareModal, setViewShareModal] = useState(false);
@@ -74,7 +75,9 @@ const HeaderTitleSaveShare = ({ title }) => {
         {/* <!-- For mobile share save and back button --> */}
         <div className="header-icon-mobile">
           <div>
-            <img alt="" src="./assets/icon/arrow_back_left_icon_home.png" />
+            <Link to="/">
+              <img alt="" src="./assets/icon/arrow_back_left_icon_home.png" />
+            </Link>
           </div>
           <div>
             <div
