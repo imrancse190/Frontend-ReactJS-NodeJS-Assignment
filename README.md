@@ -74,7 +74,7 @@ Follow these instructions to set up and run the project on your local machine.
 
 The project structure is as follows:
 
-```json
+```
 assignment4-frontend/
 ├── node_modules/
 ├── public/
