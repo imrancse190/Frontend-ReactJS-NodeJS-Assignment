@@ -1,6 +1,8 @@
-# Assignment 4 Frontend
+# Hotel Management System Backend
 
-This project is a React.js frontend application.
+## Assignment on NodeJS, ReactJS, PostgresSQL
+
+This project is a frontend application for managing hotel and room details using Node.js, Express.js, and PostgreSQL.
 
 ## Table of Contents
 
