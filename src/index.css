@@ -48,6 +48,7 @@ button {
 }
 .border-bottom-navbar {
   border-bottom: 1px solid rgb(218, 218, 218);
+  
 }
 
 .navbar-content {
@@ -160,6 +161,9 @@ button {
 .navbar-search-stay-experiences {
   display: flex;
   justify-content: center;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer ;
 }
 .navbar-search-stay-experiences > div {
   display: flex;
@@ -176,13 +180,30 @@ button {
   border-radius: 35px;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 1px;
   box-shadow: 0px 3px 10px -5px rgba(0, 0, 0, 0.295);
+ 
+}
+.navbar-search-box-after-click {
+  background: #e4e4e4;
 }
 #navbar-search-where {
   width: 35%;
-  padding: 0px 15px 0px 20px;
+  padding: 10px 15px 10px 20px;
   border-right: 1px solid rgb(224, 224, 224);
+  
+}
+.navbar-search-hover-effect:hover{
+  background: #e4e4e4;
+  border-radius: 35px;
+}
+.navbar-search-hover-effect-after-click{
+  background: #ffffff;
+  border-radius: 35px;
+}
+.navbar-search-hover-effect-after-click:hover{
+  background: #ffffff;
+  border-radius: 35px;
 }
 .bold-text {
   font-weight: bold;
@@ -192,26 +213,30 @@ button {
 }
 #navbar-search-check-in {
   width: 15%;
-  padding: 0px 15px 0px 15px;
+  padding: 10px 15px 10px  15px;
   border-right: 1px solid rgb(224, 224, 224);
 }
 #navbar-search-check-out {
   width: 15%;
-  padding: 0px 15px 0px 15px;
+  padding: 10px  15px 10px  15px;
   border-right: 1px solid rgb(224, 224, 224);
 }
 
 #navbar-search-guest-search-button {
   display: flex;
   width: 35%;
-  padding: 0px 5px 0px 15px;
+  
   justify-content: space-between;
 }
+#navbar-search-guest{
+  flex-grow: 1;
+  padding: 10px  5px 10px  15px;
+}
 .navbar-search-search-button {
-  background: #d41193;
+  background: #FF385C;
   border-radius: 35px;
   width: 55px;
-  margin: -5px;
+  margin: 5px;
   height: 55px;
   display: flex;
   align-items: center;
@@ -339,15 +364,17 @@ button {
 /* Searchbar map container css */
 .navbar-search-map-container {
   position: absolute;
-  max-width: 600px;
+  max-width: 700px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   z-index: 101;
-  left: -625px;
-  top: 40px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%,5%);
 }
+
 
 .navbar-search-map-title {
   text-align: left;
@@ -395,13 +422,16 @@ button {
 /* navbar-search-date-picker */
 .navbar-search-date-picker {
   position: absolute;
-  padding: 30px;
+  padding: 30px 5px 30px 5px;
   border: 1px solid rgb(226, 226, 226);
   border-radius: 25px;
   background: #ffffff;
   z-index: 101;
-  top: 40px;
-  right: -65px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%,5%);
+  width: 545px;
+  
 }
 /* Date months flexible */
 
@@ -436,6 +466,7 @@ button {
 .navbar-search-date-picker-calendar {
   display: flex;
 }
+
 .navbar-search-date-picker-calendar > div:first-child {
   padding-right: 30px;
 }
@@ -443,11 +474,13 @@ button {
   padding-left: 30px;
 }
 
+
 /* flexible-dates  +- day*/
 .check-in-out-day-options > div {
   display: flex;
-  font-size: 15px;
+  font-size: 12px;
   margin: 30px 0px 0px 0px;
+  justify-content: center;
 }
 .check-in-out-day-options > div > div {
   background: rgb(248, 248, 248);
@@ -458,6 +491,11 @@ button {
   cursor: pointer;
   width: fit-content;
 }
+.selected-option-day{
+  border-radius: 1px solid rgb(64, 64, 64);
+  font-weight: bold;
+}
+
 /* flatpickr-calendar edit */
 .flatpickr-calendar {
   background-color: #ffffff !important;
@@ -471,12 +509,13 @@ button {
   position: absolute;
   z-index: 102;
   background: white;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 300px;
-  right: 0px;
-  top: 40px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%,5%);
 }
 
 .search-navbar-item-guests-group {
@@ -485,6 +524,13 @@ button {
   align-items: center;
   margin-bottom: 20px;
   border-bottom: 1px solid rgb(202, 202, 202);
+}
+.search-navbar-item-guests-group-last {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  
 }
 
 .search-navbar-item-guests-label {
@@ -1688,6 +1734,83 @@ button {
   font-size: 5rem;
 }
 
+
+/* Shimmer Loader home style */
+.shimmer-loader-container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.shimmer-loader-item {
+  height: 20px;
+  background: #ddd;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.shimmer-loader-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.shimmer-loader-title {
+  width: 85%;
+}
+
+.shimmer-loader-text {
+  width: 100%;
+}
+
+.shimmer-loader-text:last-child {
+  width: 60%;
+}
+
+.shimmer-loader-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: shimmer-loader-keyframes 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@keyframes shimmer-loader-keyframes {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .shimmer-loader-container {
+    padding: 10px;
+  }
+
+  .shimmer-loader-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .shimmer-loader-item {
+    height: 15px;
+    margin-bottom: 15px;
+  }
+}
+
 /* ============================================================== */
 /* ============================================================== */
 /* ============================================================== */
@@ -1705,13 +1828,26 @@ button {
     top: 0;
     margin: 0px;
   }
-  .search-container {
-    display: none;
-  }
+
   /* searchbar */
   .search-navbar.hidden {
     display: block !important;
   }
+
+  .search-container {
+    
+    max-width: 210px;
+    display: flex;
+    
+    
+  }
+  .search-input {
+   
+    max-width: 55px;
+    font-size: 10px;
+    padding: 0px;
+  }
+  
 
   .search-navbar {
     display: flex;
@@ -2014,6 +2150,43 @@ button {
     height: 150px;
     font-size: 4rem;
   }
+
+  .navbar-search-box {
+    margin-left: 0%;
+    margin-right: 0%;
+    border-radius: 35px;
+    
+  }
+
+  .hidden-mobile{
+    display: none;
+  }
+
+  
+}
+
+/* For the mobile and tab searchbar */
+@media (max-width: 1000px) {
+  .navbar-search-box {
+    margin-left: 0%;
+    margin-right: 0%;
+    border-radius: 35px;
+  }
+  #navbar-search-where {
+    width: 25%;
+    padding: 10px 15px 10px 20px;
+    border-right: 1px solid rgb(224, 224, 224);
+    
+  }
+  #navbar-search-check-in{
+    width: 20%;
+  }
+  #navbar-search-check-out{
+    width: 20%;
+  }
+  #navbar-search-guest-search-button{
+    width: 35%;
+  }
 }
 
 /* For hide */
@@ -2047,78 +2220,4 @@ button {
   display: block;
 }
 
-/* Shimmer Loader home style */
-.shimmer-loader-container {
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-}
 
-.shimmer-loader-item {
-  height: 20px;
-  background: #ddd;
-  margin-bottom: 20px;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-}
-
-.shimmer-loader-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.shimmer-loader-title {
-  width: 85%;
-}
-
-.shimmer-loader-text {
-  width: 100%;
-}
-
-.shimmer-loader-text:last-child {
-  width: 60%;
-}
-
-.shimmer-loader-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  animation: shimmer-loader-keyframes 2s infinite linear;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.5) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-@keyframes shimmer-loader-keyframes {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@media (max-width: 480px) {
-  .shimmer-loader-container {
-    padding: 10px;
-  }
-
-  .shimmer-loader-avatar {
-    width: 40px;
-    height: 40px;
-  }
-
-  .shimmer-loader-item {
-    height: 15px;
-    margin-bottom: 15px;
-  }
-}
