@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# Assignment 4 Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React.js frontend application.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Building the Application](#building-the-application)
+- [Testing the Application](#testing-the-application)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [Additional Information](#additional-information)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow these instructions to set up and run the project on your local machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. **Clone the repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```sh
+   git clone https://github.com/imrancse190/Frontend-ReactJS-NodeJS-Assignment
+   cd assignment4-frontend
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```sh
+   npm install
+   ```
 
-### `npm run eject`
+## Running the Application
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Start the development server:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```sh
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **The application will run on `http://localhost:3006`.**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   <b>Note:</b> The backend application run on the **`http://localhost:3000`**. You should run the frontend application rather then the port 3000.
 
-## Learn More
+## Building the Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Create a production build:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```sh
+   npm run build
+   ```
 
-### Code Splitting
+2. **The production-ready files will be in the `build` directory.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Testing the Application
 
-### Analyzing the Bundle Size
+1. **Run tests:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```sh
+   npm test
+   ```
 
-### Making a Progressive Web App
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The project structure is as follows:
 
-### Advanced Configuration
+```json
+assignment4-frontend/
+├── node_modules/
+├── public/
+│   ├── assets
+|   |   ├── icon
+|   |   |   ├── place_offers
+|   |   |   └── ...
+|   |   └── images
+|   |       └── ...
+│   ├── favicon.ico
+|   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   └── ...
+│   ├── config/
+│   |   └── ...
+│   ├── pages/
+│   |   └── ...
+│   ├── sevices/
+│   |   └── ...
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── .gitignore
+├── package.json
+├── README.md
+└── ...
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Dependencies
 
-### Deployment
+The project uses the following main dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **React:** A JavaScript library for building user interfaces.
+- **React Router DOM:** A collection of navigational components for React.
+- **Axios:** A promise-based HTTP client for the browser and Node.js.
+- **React Datepicker:** A simple and reusable datepicker component for React.
+- **React Scripts:** Scripts and configuration used by Create React App.
 
-### `npm run build` fails to minify
+For a full list of dependencies, see the `package.json` file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Additional Information
+
+For any questions or issues, feel free to open an issue in the repository.
