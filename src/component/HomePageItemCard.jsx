@@ -31,7 +31,7 @@ export const HomePageItemCard = ({ data }) => {
           />
 
           <img
-            src={`./assets/images/bedroom${imageIndex}.jpg`}
+            src={data.images[0]}
             alt="Prince's Purple Rain house"
             class="item-card-image"
           />
@@ -41,7 +41,11 @@ export const HomePageItemCard = ({ data }) => {
           style={{ textDecoration: "none", color: "#555" }}
         >
           <div class="item-card-content">
-            <h2 class="item-card-title">{location}</h2>
+            <div style={{display:"flex",justifyContent:"space-between",borderBottom:"1px solid gray"}}>
+            <div class="item-card-title">{location}</div>
+            <div>▶</div>
+            </div>
+            
             <p class="item-card-host">Hosted by {host_info}</p>
             <p class="item-card-date">Now available!</p>
           </div>

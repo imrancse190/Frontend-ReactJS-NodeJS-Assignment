@@ -1701,8 +1701,9 @@ button {
 .item-card-title {
   font-size: 18px;
   font-weight: bold;
-  margin: 0 0 8px 0;
+  
 }
+
 
 .item-card-host {
   font-size: 14px;

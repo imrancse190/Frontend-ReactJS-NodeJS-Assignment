@@ -39,7 +39,7 @@ export const ApartmentBedImageOffersContainer = ({ amenities }) => {
             return (
               <div style={{ paddingRight: "10px" }} key={index}>
                 <img
-                  src={`./assets/images/${value.room_image}`}
+                  src={value.room_image}
                   alt="Bedroom"
                   className="bedroom-image"
                 />

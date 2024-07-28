@@ -39,12 +39,12 @@ const ImagesContainer = ({ images }) => {
         style={{ position: "relative" }}
       >
         <div className="gallery-first-image">
-          <img src={`./assets/images/${images[4]}`} alt="Bedroom" />
+          <img src={images[0]} alt="Bedroom" />
         </div>
         {images && images.length > 0 && (
           <div className="gallery-other-images">
             {images.map((image, index) => (
-              <img key={index} src={`./assets/images/${image}`} alt="" />
+              <img key={index} src={image} alt="" />
             ))}
           </div>
         )}
@@ -110,7 +110,7 @@ const ImagesContainer = ({ images }) => {
               </button>
               <div className="image-container">
                 <img
-                  src={`./assets/images/${images[currentIndex]}`}
+                  src={images[currentIndex]}
                   alt="Hotel room"
                   id="currentImage"
                 />
