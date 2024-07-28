@@ -31,7 +31,7 @@ Follow these instructions to set up and run the project on your local machine.
 
    ```sh
    git clone https://github.com/imrancse190/Frontend-ReactJS-NodeJS-Assignment
-   cd assignment4-frontend
+   cd Frontend-ReactJS-NodeJS-Assignment
    ```
 
 2. **Install dependencies:**
