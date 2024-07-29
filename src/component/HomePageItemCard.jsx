@@ -14,6 +14,9 @@ export const HomePageItemCard = ({ data }) => {
   const toggleViewShareModal = () => {
     setViewShareModal(!viewShareModal);
   };
+  function detailsPageClick() {
+    window.scrollTo(0, 0);
+  }
 
   return (
     <div>
@@ -35,7 +38,11 @@ export const HomePageItemCard = ({ data }) => {
             className="item-card-image"
           />
         </div>
-        <Link to={`/${data.slug}`} className="home-page-item-card">
+        <Link
+          to={`/${data.slug}`}
+          className="home-page-item-card"
+          onClick={() => detailsPageClick()}
+        >
           <div className="item-card-content">
             <div className="home-page-item-card-title">
               <div className="item-card-title">{location}</div>
