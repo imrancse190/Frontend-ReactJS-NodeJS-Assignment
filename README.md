@@ -18,6 +18,7 @@ This project is a frontend application for managing hotel and room details using
 - [Testing the Application](#testing-the-application)
 - [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
+- [Screensorts](#screensorts)
 - [Additional Information](#additional-information)
 
 ## Getting Started
@@ -121,7 +122,7 @@ The project uses the following main dependencies:
 
 For a full list of dependencies, see the `package.json` file.
 
-## Screensort
+## Screensorts
 
 ### Homepage
 
