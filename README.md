@@ -8,8 +8,6 @@ This project is a frontend application for managing hotel and room details using
 
 ## Table of Contents
 
-## Table of Contents
-
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -131,11 +129,11 @@ For a full list of dependencies, see the `package.json` file.
 
 ### Details Page
 
-#### Fetch from hotels table
+#### Fetch from hotels table and hotel/:slug endpoint.
 
 <img src="./public/screensort/image2.png" alt="Image" width="600">
 
-#### Fetch from Room table
+#### Fetch from room table and hotel/:slug/room/:room-slug endpoint.
 
 <img src="./public/screensort/image3.png" alt="Image" width="600">
 
