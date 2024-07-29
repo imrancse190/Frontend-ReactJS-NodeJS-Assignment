@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const CheckAvailabilitySidebarContainer = () => {
   return (
@@ -30,10 +31,10 @@ export const CheckAvailabilitySidebarContainer = () => {
           </button>
         </form>
       </div>
-      <a href="#" className="report-listing">
+      <Link href="#" className="report-listing">
         <img src="./assets/icon/flag_report_icon_body.png" alt="" />
         <span>Report this listing</span>
-      </a>
+      </Link>
     </aside>
   );
 };

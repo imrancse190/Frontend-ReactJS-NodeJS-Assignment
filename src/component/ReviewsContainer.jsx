@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const ReviewsContainer = () => {
   return (
@@ -12,9 +13,9 @@ export const ReviewsContainer = () => {
           <span>
             <span>This host has 310 reviews for other places to stay.</span>
             <br />
-            <a href="#" className="show-other-reviews">
+            <Link href="#" className="show-other-reviews">
               Show other reviews
-            </a>
+            </Link>
           </span>
         </p>
       </section>

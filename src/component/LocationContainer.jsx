@@ -6,13 +6,13 @@ export const LocationContainer = ({ location, latitude, longitude }) => {
     <div>
       <section className="location-info container-size">
         <h2 className="location-heading">Where you'll be</h2>
-        <p className="location-address">
+        <div className="location-address">
           <p>{location}</p>
           <p>
             {"Latitude: " + latitude}
             {". Longitude: " + longitude}
           </p>
-        </p>
+        </div>
 
         <div className="location-map">
           {/* <img alt="" src="./assets/images/map_image.png" /> */}
@@ -21,9 +21,9 @@ export const LocationContainer = ({ location, latitude, longitude }) => {
             width="100%"
             height="450"
             style={{ border: 0 }}
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
             title="Google Map"
           ></iframe>
         </div>

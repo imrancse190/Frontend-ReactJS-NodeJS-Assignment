@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import { ShimmerLoaderText } from "./ShimmerLoaderText";
 import api from "../services/api";
@@ -20,6 +19,7 @@ export const ApartmentBedImageOffersContainer = ({ amenities }) => {
 
   useEffect(() => {
     getAllRooms();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!amenities) {

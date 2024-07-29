@@ -5,7 +5,6 @@ import { ShareModal } from "./ShareModal";
 export const HomePageItemCard = ({ data }) => {
   const [viewShareModal, setViewShareModal] = useState(false);
 
-  let imageIndex = Math.floor(Math.random() * 8) + 1;
   //   For spliting address
   const addressParts = data.address.split(",");
   const location = addressParts.slice(-2).join(", ");
@@ -21,8 +20,8 @@ export const HomePageItemCard = ({ data }) => {
       {viewShareModal && (
         <ShareModal toggleViewShareModal={toggleViewShareModal} />
       )}
-      <div class="item-card-container">
-        <div class="item-card-image-wrapper">
+      <div className="item-card-container">
+        <div className="item-card-image-wrapper">
           <img
             src="./assets/icon/ios_share_icon_header.png"
             alt=""
@@ -33,21 +32,27 @@ export const HomePageItemCard = ({ data }) => {
           <img
             src={data.images[0]}
             alt="Prince's Purple Rain house"
-            class="item-card-image"
+            className="item-card-image"
           />
         </div>
         <Link
           to={`/${data.slug}`}
           style={{ textDecoration: "none", color: "#555" }}
         >
-          <div class="item-card-content">
-            <div style={{display:"flex",justifyContent:"space-between",borderBottom:"1px solid gray"}}>
-            <div class="item-card-title">{location}</div>
-            <div>▶</div>
+          <div className="item-card-content">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                borderBottom: "1px solid gray",
+              }}
+            >
+              <div className="item-card-title">{location}</div>
+              <div>▶</div>
             </div>
-            
-            <p class="item-card-host">Hosted by {host_info}</p>
-            <p class="item-card-date">Now available!</p>
+
+            <p className="item-card-host">Hosted by {host_info}</p>
+            <p className="item-card-date">Now available!</p>
           </div>
         </Link>
       </div>

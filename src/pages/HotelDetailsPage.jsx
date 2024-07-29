@@ -21,7 +21,6 @@ export const HotelDetailsPage = () => {
     api
       .get(`/hotel/${slug}`)
       .then((data) => {
-        console.log(data.data);
         setHotelInfo(data.data);
       })
       .catch((error) => {
@@ -32,6 +31,7 @@ export const HotelDetailsPage = () => {
 
   useEffect(() => {
     getAllHotels();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (pageNotFound[0]) {

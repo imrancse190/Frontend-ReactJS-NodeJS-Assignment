@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const ShowMoreButton = ({ text }) => {
   return (
     <div className="show-more-button-div">
-      <a href="#" className="show-more-link">
+      <Link href="#" className="show-more-link">
         {text}
-      </a>
+      </Link>
       <img
         alt=""
         className="show-more-right-arror-icon"

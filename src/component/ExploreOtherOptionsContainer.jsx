@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const exploreOptionsData = [
   { location: "Cieneguilla", type: "Vacation rentals" },
@@ -24,14 +25,14 @@ export const ExploreOtherOptionsContainer = () => {
     <div className="footer-full-data">
       <div className="explore-options-container">
         <nav className="breadcrumb-nav container-size">
-          <a href="#" className="breadcrumb-link">
+          <Link href="#" className="breadcrumb-link">
             Peru
-          </a>{" "}
+          </Link>{" "}
           {" > "}
-          <a href="#" className="breadcrumb-link">
+          <Link href="#" className="breadcrumb-link">
             {" "}
             Lima Province
-          </a>{" "}
+          </Link>{" "}
           {" > "}
           <span className="breadcrumb-current">Jesús María</span>
         </nav>
@@ -60,9 +61,9 @@ export const ExploreOtherOptionsContainer = () => {
         <div className="other-stays-list container-size">
           {otherStaysLinks.map((item, index) => {
             return (
-              <a href="#" className="other-stays-link" key={index}>
+              <Link href="#" className="other-stays-link" key={index}>
                 {item}
-              </a>
+              </Link>
             );
           })}
         </div>

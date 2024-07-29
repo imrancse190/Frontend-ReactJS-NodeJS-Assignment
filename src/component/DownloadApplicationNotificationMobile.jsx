@@ -7,20 +7,25 @@ export const DownloadApplicationNotificationMobile = () => {
       {/* <!-- Get the app for  mobile --> */}
       {/* <!-- Notification for the download app for the mobile user --> */}
       {visible && (
-        <div class="app-banner">
-          <div class="app-banner-close" onClick={() => setVisible(!visible)}>
+        <div className="app-banner">
+          <div
+            className="app-banner-close"
+            onClick={() => setVisible(!visible)}
+          >
             ❌
           </div>
-          <div class="app-banner-content">
-            <div class="app-banner-icon">
-              <div class="app-banner-icon-square"></div>
+          <div className="app-banner-content">
+            <div className="app-banner-icon">
+              <div className="app-banner-icon-square"></div>
             </div>
-            <div class="app-banner-text">
-              <div class="app-banner-title">Get the app</div>
-              <div class="app-banner-subtitle">The fastest, easiest way</div>
+            <div className="app-banner-text">
+              <div className="app-banner-title">Get the app</div>
+              <div className="app-banner-subtitle">
+                The fastest, easiest way
+              </div>
             </div>
           </div>
-          <button class="app-banner-button">USE APP</button>
+          <button className="app-banner-button">USE APP</button>
         </div>
       )}
     </div>
