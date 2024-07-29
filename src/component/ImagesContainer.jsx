@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ShimmerLoaderHome } from "./ShimmerLoaderHome";
 import { SaveItemButton } from "./SaveItemButton";
 import { ShareModal } from "./ShareModal";
-import { Link } from "react-router-dom";
 
 const ImagesContainer = ({ images }) => {
   const [viewImages, setViewImages] = useState(false);
