@@ -4,9 +4,9 @@
 
 This project is a frontend application for managing hotel and room details using Node.js, Express.js, and PostgreSQL.
 
-## [**Backend**](https://github.com/imrancse190/Backend-ReactJS-NodeJS-Assignment)
-## Table of Contents
+## [**Backend Link🔗**](https://github.com/imrancse190/Backend-ReactJS-NodeJS-Assignment)
 
+## Table of Contents
 
 ## Table of Contents
 
@@ -120,6 +120,23 @@ The project uses the following main dependencies:
 - **React Scripts:** Scripts and configuration used by Create React App.
 
 For a full list of dependencies, see the `package.json` file.
+
+## Screensort
+
+### Homepage
+
+<img src="./public/screensort/image.png" alt="Image" width="600">
+<img src="./public/screensort/image1.png" alt="Image" width="600">
+
+### Details Page
+
+#### Fetch from hotels table
+
+<img src="./public/screensort/image2.png" alt="Image" width="600">
+
+#### Fetch from Room table
+
+<img src="./public/screensort/image3.png" alt="Image" width="600">
 
 ## Additional Information
 
