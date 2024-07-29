@@ -1950,7 +1950,7 @@ button {
     display: none;
   }
   .gallery-show-all-photos p::after {
-    content: "1/21";
+    content: "Show 9 photos";
   }
 
   /* header back share save icon  for mobile*/
