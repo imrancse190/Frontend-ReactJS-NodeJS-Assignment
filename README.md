@@ -1,4 +1,4 @@
-# Hotel Management System Backend
+# Hotel Management System Frontend
 
 ## Assignment on NodeJS, ReactJS, PostgresSQL
 
