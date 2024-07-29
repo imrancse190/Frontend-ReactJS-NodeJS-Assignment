@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ShimmerLoaderHome } from "./ShimmerLoaderHome";
 import { SaveItemButton } from "./SaveItemButton";
 import { ShareModal } from "./ShareModal";
+import { Link } from "react-router-dom";
 
 const ImagesContainer = ({ images }) => {
   const [viewImages, setViewImages] = useState(false);
@@ -10,6 +11,7 @@ const ImagesContainer = ({ images }) => {
 
   const viewAllImages = () => {
     setViewImages(!viewImages);
+    window.scrollTo(0, 0);
   };
   const toggleViewShareModal = () => {
     setViewShareModal(!viewShareModal);
@@ -48,6 +50,7 @@ const ImagesContainer = ({ images }) => {
             ))}
           </div>
         )}
+
         <div
           className="gallery-show-all-photos"
           id="gallery-show-all-photos-id"

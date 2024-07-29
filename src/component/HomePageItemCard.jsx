@@ -35,18 +35,9 @@ export const HomePageItemCard = ({ data }) => {
             className="item-card-image"
           />
         </div>
-        <Link
-          to={`/${data.slug}`}
-          style={{ textDecoration: "none", color: "#555" }}
-        >
+        <Link to={`/${data.slug}`} className="home-page-item-card">
           <div className="item-card-content">
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                borderBottom: "1px solid gray",
-              }}
-            >
+            <div className="home-page-item-card-title">
               <div className="item-card-title">{location}</div>
               <div>▶</div>
             </div>

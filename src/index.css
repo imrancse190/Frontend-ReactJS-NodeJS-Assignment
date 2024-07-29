@@ -868,8 +868,8 @@ button {
   margin-top: -30px;
 }
 .show-all-images-img-size {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 #currentImage {
@@ -885,15 +885,13 @@ button {
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  border: 1px solid gray;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 18px;
   border-radius: 25px;
 }
 .nav-button:hover {
-  background-color: gray;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.226);
 }
 
 .prev {
@@ -1692,7 +1690,19 @@ button {
   height: 100%;
   object-fit: cover;
 }
-
+.home-page-item-card {
+  text-decoration: none;
+  color: rgb(85, 85, 85);
+}
+.home-page-item-card-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  transition: border-bottom 0.2s ease-in-out;
+}
+.home-page-item-card-title:hover {
+  border-bottom: 1px solid rgb(173, 173, 173);
+}
 .item-card-content {
   padding: 16px;
   background-color: white;
@@ -1701,9 +1711,7 @@ button {
 .item-card-title {
   font-size: 18px;
   font-weight: bold;
-  
 }
-
 
 .item-card-host {
   font-size: 14px;
